@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="English">
+<head>
+    <title>Booking Report</title>
+</head>
+
+<body>
+<header>
+    <h1>Report a Booking</h1>
+</header>
+<nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/main-booking">Booking</a></li>
+        <li><a href="/report-workshops">Report on Workshops</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/help">Help</a></li>
+    </ul>
+</nav>
+<main>
+    <h2>Booking Report</h2>
+    <div>
+        <h2>Your Booking Information:</h2>
+        <p>Booking Number: <%= booking.bookingNo %></p>
+        <p>First Name: <%= booking.fname %></p>
+        <p>Last Name: <%= booking.lname %></p>
+        <p>Date of Birth: <%= booking.dob %></p>
+        <p>Address: <%= booking.address %></p>
+        <p>Email: <%= booking.email %></p>
+        <p>Telephone Number: <%= booking.tel_number %></p>
+        <p>Time: <%= booking.time %></p>
+        <p>Date: <%= booking.date %></p>
+        <p>Workshop: <%= booking.workshopSelection %></p>
+
+    </div>
+    <form action="/modify-booking" method="get">
+        <input type="hidden" name="bookingNumber" value="<%= booking.bookingNo %>">
+        <button type="submit" class="submit-button">Modify Booking</button>
+    </form>
+
+    <form action="/delete-booking" method="get">
+        <input type="hidden" name="bookingNumber" value="<%= booking.bookingNo %>">
+        <button type="submit" class="submit-button">Delete Booking</button>
+    </form>
+</main>
+<footer>
+    &copy; 2023 PhotoVen Booking
+</footer>
+</body>
+<style>
+    /* Reset some default styles to provide a clean slate */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Set background color and font styles */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        margin: 0;
+    }
+
+    /* Header styling */
+    header {
+        background-color: #0073e6;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+
+    /* Navigation menu */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    nav li {
+        margin: 0 15px;
+    }
+
+    nav a {
+        color: #000;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+
+    nav a:hover {
+        color: #ff9100;
+    }
+
+    /* Main content container */
+    main {
+        background-color: #fff;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Footer */
+    footer {
+        background-color: #0073e6;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+    }
+
+    form {
+        border: 1px solid #ccc;
+        padding: 20px;
+    }
+
+    label, input {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .submit-button {
+        display: inline-block;
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        margin-top: -20px;
+    }
+
+</style>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="English">
+<head>
+    <title>Report a Booking</title>
+</head>
+
+<body>
+<header>
+    <h1>Report a Booking</h1>
+</header>
+<nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/main-booking">Booking</a></li>
+        <li><a href="/report-workshops">Report on Workshops</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/help">Help</a></li>
+    </ul>
+</nav>
+<main>
+    <h2>Booking Report</h2>
+    <p>Enter your booking number and the new information below to modify your booking:</p>
+    <form action="/display-booking" method="post">
+        <label for="bookingNumber">Booking Number:</label>
+        <input type="text" id="bookingNumber" name="bookingNumber" required>
+        <button type="submit" class="submit-button">Verify Booking</button>
+    </form>
+</main>
+<footer>
+    &copy; 2023 PhotoVen Booking
+</footer>
+</body>
+<style>
+    /* Reset some default styles to provide a clean slate */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Set background color and font styles */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        margin: 0;
+    }
+
+    /* Header styling */
+    header {
+        background-color: #0073e6;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+
+    /* Navigation menu */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    nav li {
+        margin: 0 15px;
+    }
+
+    nav a {
+        color: #000;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+
+    nav a:hover {
+        color: #ff9100;
+    }
+
+    /* Main content container */
+    main {
+        background-color: #fff;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Footer */
+    footer {
+        background-color: #0073e6;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+    }
+
+    form {
+        border: 1px solid #ccc;
+        padding: 20px;
+    }
+
+    label, input {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .submit-button {
+        display: inline-block;
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        margin-top: -20px;
+    }
+
+</style>
+</html>
